@@ -1,0 +1,1 @@
+/home/pop/Documents/advent-of-code-2023/day3/target/debug/day3: /home/pop/Documents/advent-of-code-2023/day3/src/main.rs /home/pop/Documents/advent-of-code-2023/day3/src/part1.rs /home/pop/Documents/advent-of-code-2023/day3/src/part2.rs
