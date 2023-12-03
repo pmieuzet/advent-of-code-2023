@@ -85,7 +85,7 @@ fn get_vector_split(input: String) -> Vec<Vec<char>> {
 }
 
 pub fn part1() {
-    let file = std::fs::File::open("message.txt").unwrap();
+    let file = std::fs::File::open("input.txt").unwrap();
     let mut reader = std::io::BufReader::new(file);
     let mut input = String::new();
 
