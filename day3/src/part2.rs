@@ -12,7 +12,7 @@ fn is_gear(tab: Vec<Vec<char>>, i: usize, j: usize) -> Option<(usize, usize)> {
     let size_line = tab[i].len();
     if i != 0 {
         if j != 0 && tab[i - 1][j - 1] == '*' {
-            return Some((1 - i, j - 1));
+            return Some((i - 1, j - 1));
         }
         if tab[i - 1][j] == '*' {
             return Some((i - 1, j));

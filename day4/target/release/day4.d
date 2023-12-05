@@ -1,0 +1,1 @@
+/home/pop/Documents/advent-of-code-2023/day4/target/release/day4: /home/pop/Documents/advent-of-code-2023/day4/src/main.rs /home/pop/Documents/advent-of-code-2023/day4/src/part1.rs /home/pop/Documents/advent-of-code-2023/day4/src/part2.rs
