@@ -7,14 +7,14 @@ use std::{
 #[derive(Debug, Clone)]
 struct Scratchcard {
     card: usize,
-    win_numbers: Vec<u32>,
-    my_numbers: Vec<u32>,
+    win_numbers: Vec<u64>,
+    my_numbers: Vec<u64>,
 }
 
 #[derive(Debug, Clone)]
 struct Card {
     index: usize,
-    occ: u32,
+    occ: u64,
 }
 
 fn get_card_by_index(scratchcards: Vec<Scratchcard>, index: usize) -> Option<Scratchcard> {
@@ -40,7 +40,7 @@ fn generate_cards(scractchcards: Vec<Scratchcard>) -> Vec<Card> {
     cards
 }
 
-fn calculate_result(cards: Vec<Card>) -> u32 {
+fn calculate_result(cards: Vec<Card>) -> u64 {
     let mut result = 0;
     for card in cards {
         result += card.occ;
@@ -48,7 +48,7 @@ fn calculate_result(cards: Vec<Card>) -> u32 {
     result
 }
 
-fn get_numbers_scratchcards(scractchcards: Vec<Scratchcard>) -> u32 {
+fn get_numbers_scratchcards(scractchcards: Vec<Scratchcard>) -> u64 {
     let mut result = 0;
     let mut cards = generate_cards(scractchcards.clone());
     for scratchcard in scractchcards {
@@ -90,13 +90,13 @@ fn get_new_scratchcards(card: &str, list_of_numbers: &str) -> Option<Scratchcard
     let winners_numbers = winners_numbers
         .trim()
         .split_ascii_whitespace()
-        .map(|number| number.parse::<u32>().unwrap())
-        .collect::<Vec<u32>>();
+        .map(|number| number.parse::<u64>().unwrap())
+        .collect::<Vec<u64>>();
     let my_numbers = my_numbers
         .trim()
         .split_ascii_whitespace()
-        .map(|number| number.parse::<u32>().unwrap())
-        .collect::<Vec<u32>>();
+        .map(|number| number.parse::<u64>().unwrap())
+        .collect::<Vec<u64>>();
 
     Some(Scratchcard {
         card: (index),

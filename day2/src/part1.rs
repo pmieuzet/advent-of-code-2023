@@ -24,7 +24,7 @@ fn is_possible_party(str: String) -> bool {
     true
 }
 
-fn check_verify(red: u32, green: u32, blue: u32) -> bool {
+fn check_verify(red: u64, green: u64, blue: u64) -> bool {
     if red > 12 || green > 13 || blue > 14 {
         return false;
     }
@@ -32,9 +32,9 @@ fn check_verify(red: u32, green: u32, blue: u32) -> bool {
 }
 
 struct Party {
-    red: u32,
-    green: u32,
-    blue: u32,
+    red: u64,
+    green: u64,
+    blue: u64,
 }
 
 fn is_valide_party(str: String) -> bool {
@@ -47,9 +47,9 @@ fn is_valide_party(str: String) -> bool {
     println!("{split:?}");
     if let Some((number, color)) = split {
         match color {
-            "red" => party.red += number.parse::<u32>().unwrap(),
-            "blue" => party.blue += number.parse::<u32>().unwrap(),
-            "green" => party.green += number.parse::<u32>().unwrap(),
+            "red" => party.red += number.parse::<u64>().unwrap(),
+            "blue" => party.blue += number.parse::<u64>().unwrap(),
+            "green" => party.green += number.parse::<u64>().unwrap(),
             _ => panic!("error"),
         }
     }
