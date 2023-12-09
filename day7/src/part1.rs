@@ -53,7 +53,7 @@ fn get_size_of_three(winnings: HashMap<char, i8>) -> Label {
     Label::TWOPAIR
 }
 
-fn get_label(winnings: HashMap<char, i8>) -> Label {
+fn get_label(mut winnings: HashMap<char, i8>) -> Label {
     match winnings.len() {
         5 => return Label::HIGHCARD,
         4 => return Label::ONEPAIR,
